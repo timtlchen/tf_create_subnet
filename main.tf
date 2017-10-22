@@ -10,7 +10,7 @@ resource "google_compute_network" "auto-vpc" {
   auto_create_subnetworks = "false"
 }
 
-resource "google_compute_subnetwork" "auto-subnet" {
+resource "google_compute_subnetwork" "auto-subnet-1" {
   name          = "${var.project_tag}-subnet-1"
   ip_cidr_range = "192.168.101.0/24"
   network       = "${google_compute_network.auto-vpc.self_link}"
@@ -18,7 +18,7 @@ resource "google_compute_subnetwork" "auto-subnet" {
   private_ip_google_access = "false"
 }
 
-resource "google_compute_subnetwork" "auto-subnet" {
+resource "google_compute_subnetwork" "auto-subnet-2" {
   name          = "${var.project_tag}-subnet-2"
   ip_cidr_range = "192.168.102.0/24"
   network       = "${google_compute_network.auto-vpc.self_link}"
@@ -26,7 +26,7 @@ resource "google_compute_subnetwork" "auto-subnet" {
   private_ip_google_access = "false"
 }
 
-resource "google_compute_subnetwork" "auto-subnet" {
+resource "google_compute_subnetwork" "auto-subnet-3" {
   name          = "${var.project_tag}-subnet-3"
   ip_cidr_range = "192.168.103.0/24"
   network       = "${google_compute_network.auto-vpc.self_link}"
