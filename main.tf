@@ -64,7 +64,7 @@ resource "google_compute_firewall" "auto-firewall-rule-bastion" {
   allow {
     protocol = "all"
   }
-  source_ranges [
+  source_ranges = [
     "0.0.0.0/0"
   ]
 }
