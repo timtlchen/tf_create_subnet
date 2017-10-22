@@ -50,7 +50,7 @@ resource "google_compute_firewall" "auto-firewall-rule-allow-internal" {
   allow {
     protocol = "all"
   }
-  source_ranges [
+  source_ranges = [
     "192.168.101.0/24",
     "192.168.102.0/24",
     "192.168.103.0/24"
