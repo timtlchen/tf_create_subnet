@@ -18,5 +18,8 @@ variable "account_file_path" {
 	description = "Path to the JSON file used to describe your account credentials"
 }
 
+variable "bastion_tag" {
+	description = "Tag of bastion server. Servers with this tags are allowed to communicate with external servers."
+}
 
 
